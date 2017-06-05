@@ -12,14 +12,14 @@ return
 |
 */
 [
-    'testing' => true, // Set to false when in production.
+    'testing' => env('PAYFAST_SANDBOX'), // Set to false when in production.
     'currency' => 'ZAR', // ZAR is the only supported currency at this point.
     'merchant' => [
         'merchant_id' => env('PAYFAST_MERCHANT_ID'),//'10000100', // TEST Credentials. Replace with your merchant ID from Payfast.
         'merchant_key' => env('PAYFAST_MERCHANT_KEY'),//'46f0cd694581a', // TEST Credentials. Replace with your merchant key from Payfast.
-        'return_url' => 'http://94.156.144.223/rnd/payfast/success', // The URL the customer should be redirected to after a successful payment.
-        'cancel_url' => 'http://94.156.144.223/rnd/payfast/cancelled', // The URL the customer should be redirected to after a payment is cancelled.
-        'notify_url' => 'http://94.156.144.223/rnd/payfast/itn', // The URL to which Payfast will post return variables.
+        'return_url' => 'http://yourserver.com/success', // The URL the customer should be redirected to after a successful payment.
+        'cancel_url' => 'http://yourserver.com/cancelled', // The URL the customer should be redirected to after a payment is cancelled.
+        'notify_url' => 'http://yourserver.com/itn', // The URL to which Payfast will post return variables.
     ],
 
     'hosts' => [
